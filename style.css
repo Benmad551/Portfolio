@@ -1,0 +1,23 @@
+/* Peach: #FFDAB9, Fern: #7FA36C*/
+/* B7E4C7 looks like a better green for chrome, more of what I was expecting */ 
+
+
+
+footer {
+  background-color: #B7E4C7; /* Fern color */
+  color: white;
+  padding: 10px 0;
+
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.footer-left{
+    display: flex;
+}
+.footer-right {
+    display: flex;
+}
