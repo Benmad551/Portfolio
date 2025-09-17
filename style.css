@@ -1,23 +1,58 @@
-/* Peach: #FFDAB9, Fern: #7FA36C*/
-/* B7E4C7 looks like a better green for chrome, more of what I was expecting */ 
+* {
+    box-sizing: border-box;
+}
+html {
+    height : 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-color: white; /* Fern color */
+    color: #242A2D; /* Peach color */
+    padding: 10px;
+}
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+main {
+    flex: 1;
+    padding: 0 10px;
+    background-color: #D3C0D2;
+}
+
 
 
 
 footer {
-  background-color: #B7E4C7; /* Fern color */
-  color: white;
-  padding: 10px 0;
+  background-color: white; /* Fern color */
+  color: black;
 
 }
+footer a {
+text-decoration: none;
+font-weight: bold;
+color: #242A2D;
+}
+
 .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 10px 20px;
 }
 .footer-left{
     display: flex;
 }
 .footer-right {
     display: flex;
+    gap: 20px;
 }
