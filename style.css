@@ -12,12 +12,15 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
+    font-family: Geneva, Verdana, sans-serif;
 }
 
 header {
-    background-color: white; /* Fern color */
-    color: #242A2D; /* Peach color */
+    background-color: white; 
+    color: #242A2D; /* Dark Charcoal color */
+    display: flex;
     padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 header h1 {
     margin: 0;
@@ -26,21 +29,104 @@ header h1 {
 main {
     flex: 1;
     padding: 0 10px;
-    background-color: #D3C0D2;
+    background-color: #f2eef1;
+}
+main h2 {
+    color: black;
+    font-size: 28px;
+    margin: 20px;
+    padding: 0;
+}
+.about-me-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#about-me {
+    max-width: 1000px;;
+    padding: 10px;
+}
+#EaglePhoto {
+    float: right;
+    box-shadow: rgba(0,0,0,0.08);
+    border-radius: 100px;}
+main p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: black;
+    margin: 20px;
+}
+.rect-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.chatbot-rect {
+    background: #779287; /* Peach color */
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin: 32px 0;
+    max-width: 450px;
+}
+/* Changes text for the chatbot Rect */
+.chatbot-rect a, .chatbot-rect h3, .chatbot-rect p {
+    font-family: Geneva, Verdana, sans-serif;
+    color: black;
+}
+/* Hover effect for all rectangles */
+.chatbot-rect:hover, .website-rect:hover, .UPS-rect:hover, .PC-rect:hover{
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    transform: translate3D(0,-2px, 0);
+    transition: all 0.3s ease;
 }
 
-
-
+.website-rect {
+    background-color: #475457;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin: 32px 0;
+    max-width: 450px;
+}
+/* Changes text for the website Rect */
+.website-rect h3, .website-rect p, .website-rect a {
+    font-family: Geneva, Verdana, sans-serif;
+    color: white;
+}
+.UPS-rect{
+    background-color: #B7E4C7;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin: 32px 0;
+    max-width: 450px;
+}
+.PC-rect {
+    background-color: #242A2D;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin: 30px 0;
+    max-width: 450px;
+}
+.PC-rect h3, .PC-rect p, .PC-rect a {
+    font-family: Geneva, Verdana, sans-serif;
+    color: white;
+}
 
 footer {
-  background-color: white; /* Fern color */
+  background-color: white; 
   color: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 
 }
 footer a {
 text-decoration: none;
 font-weight: bold;
-color: #242A2D;
+font-size: 14px;
+color: black;
 }
 
 .footer-container {
@@ -54,5 +140,9 @@ color: #242A2D;
 }
 .footer-right {
     display: flex;
-    gap: 20px;
+    gap: 25px;
+}
+.logos {
+    width: 30px;
+    height: 30px;
 }
