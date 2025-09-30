@@ -5,6 +5,7 @@ html {
     height : 100%;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -14,18 +15,100 @@ body {
     margin: 0;
     font-family: Geneva, Verdana, sans-serif;
 }
-
+ /* ~~~~~~~ Header ~~~~~~~~ */
 header {
     background-color: white; 
     color: #242A2D; /* Dark Charcoal color */
     display: flex;
+    flex-direction: column;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 header h1 {
     margin: 0;
     font-size: 32px;
+    padding: 0;
 }
+header nav {
+    display: block;
+    gap: 0px;
+    justify-self: center;
+
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding: 0;
+}
+ /* Test3 is a simple button. The button class will be an animated button */
+#test3 ul li {
+    background: #89D2A2;
+    border-radius: 20px;
+    border: none;
+    padding: 7px 7px;
+}
+#test3 ul li a {
+    color: black;
+    text-decoration-color: black;
+    text-decoration-thickness: 2px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.button {
+    cursor: pointer;
+    display: inline-flex; /* allow overflow to clip and padding to behave */
+    border: 1px solid transparent;
+    border-radius: 0.8em;
+    background: #89D2A2;
+    position: relative;
+    line-height: 1;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    overflow: hidden;
+    padding: 4px;
+}
+.button span {
+  position: relative;
+  z-index: 10; /* Keep text above the pseudo elements */
+  transition: color 0.4s;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8em 1.2em 0.8em 1.05em;
+}
+.button::before,
+.button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.button::before {
+  content: "";
+  background: #475457;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.button:hover::before {
+  opacity: 0;
+}
+
+.button:hover span {
+  color: Black;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+/* ~~~~~~~~ Main ~~~~~~~ */
 main {
     flex: 1;
     padding: 0 10px;
@@ -49,13 +132,17 @@ main h2 {
 #EaglePhoto {
     float: right;
     box-shadow: rgba(0,0,0,0.08);
-    border-radius: 100px;}
+    border-radius: 100px;
+    border: 1px solid #f2e2f1;
+}
 main p {
     font-size: 18px;
     line-height: 1.6;
     color: black;
     margin: 20px;
 }
+
+/* ~~~~~~~ Rectangles Styles ~~~~~~ */
 .rect-container {
     display: flex;
     justify-content: center;
@@ -63,7 +150,7 @@ main p {
     gap: 40px;
 }
 .chatbot-rect {
-    background: #779287; /* Peach color */
+    background: #779287; /*gray-green color*/
     border-radius: 20px;
     padding: 16px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -76,7 +163,7 @@ main p {
     color: black;
 }
 /* Hover effect for all rectangles */
-.chatbot-rect:hover, .website-rect:hover, .UPS-rect:hover, .PC-rect:hover{
+.rect:hover {
     box-shadow: 0 4px 16px rgba(0,0,0,0.12);
     transform: translate3D(0,-2px, 0);
     transition: all 0.3s ease;
@@ -116,6 +203,8 @@ main p {
     color: white;
 }
 
+/* ~~~~~~~ Footer Styles ~~~~~~ */
+
 footer {
   background-color: white; 
   color: black;
@@ -142,7 +231,17 @@ color: black;
     display: flex;
     gap: 25px;
 }
+/* Resizes logos in footer */
 .logos {
+    perspective: 1000px;
     width: 30px;
     height: 30px;
+} 
+.logos:hover {
+    animation: spin 3s linear infinite;
+
+}
+@keyframes spin {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
 }

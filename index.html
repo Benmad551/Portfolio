@@ -10,10 +10,18 @@
 <body>
     <header>
         <h1>Benjamin Madison | Projects & IT Experience</h1>
+        <nav>
+            <ul>
+                <li><a href="#about-me-section" class="button"><span>About Me</span></a></li>
+                <li><a href="#projects-section" class="button"><span>Projects</span></a></li>
+                <li><a href="#IT-support-section" class="button"><span>IT Support Stories</span></a></li>
+            </ul>
+        </nav>
+        <!-- Adding a test button that will have css animation, hopefully to replace the current ones-->
     </header>
 
     <main>
-    <section>   
+    <section id="about-me-section">   
     <h2>About Me</h2>
     <div class="about-me-container">
     
@@ -24,12 +32,12 @@
         <img id="EaglePhoto" src="EaglePhoto.jpg" width="175" height="250" alt="EagleScoutPhoto">
         </div>
     </section>
-    <section>
+    <section id="projects-section">
     <h2>Projects</h2>
         <p>Here are some of my projects:</p>
 
     <div class="rect-container">
-        <div class="chatbot-rect">
+        <div class="chatbot-rect rect">
             <h3>Simple Chatbot: </h3>
             <p>A simple chatbot based on the Natural Language Tool Kit (NLTK) library. In it I primarily learned about 
                 using multiple files, each with their own chatbot, then having a main file to call each of them.
@@ -38,7 +46,7 @@
             <p>For more information click  <a href="https://github.com/Benmad551/Chatbot">here</a></p>
         </div>
 
-        <div class="website-rect">
+        <div class="website-rect rect">
             <h3>This Website: </h3>
             <p>A portfolio website built using HTML and CSS to showcase my projects and skills. In this project I
                 learned more about HTML and CSS. I took a class where we learned about it, but I went out and started my 
@@ -49,11 +57,13 @@
         </div> 
     </div>
 </section>
-<section>
+
+<section id="IT-support-section">
 <h2>IT Support Stories</h2>
 <p>Here are some of my personal stories relating to tech and my IT support:</p>
+
 <div class="rect-container">
-    <div class="UPS-rect">
+    <div class="UPS-rect rect">
         <h3>The beeping UPS</h3>
         <p>
             <strong>Problem:</strong> The UPS (Uninterruptible Power Supply) for the register system in a retail store was beeping continuously. The register system was still operational, but the beeping was distracting for both employees and customers. <br>
@@ -61,7 +71,7 @@
             <strong>Takeaway:</strong> Start troubleshooting with the small things first.
         </p>
     </div>
-    <div class="PC-rect">
+    <div class="PC-rect rect">
         <h3>Locked PC</h3>
         <p>
             <strong>Problem:</strong> Help needed setting up a used PC that was locked in the previous owner's account. <br>
@@ -83,7 +93,11 @@
         <!-- attempt for seperating linkedin and github on right of footer-->
             <div class = "footer-right">
                 <!--Add images for the LinkedIn | Github using svg files to easily change color-->
-                <a href="http://linkedin.com/in/benjamin-madison/" target="_blank"> <img class="logos" src="LinkedIn.svg" alt="LinkedIn"> </a> <a href="https://github.com/Benmad551" target="_blank"> <img class="logos" src="GitHub.svg" alt="GitHub"></a>
+                <a href="http://linkedin.com/in/benjamin-madison/" target="_blank"> 
+                <img class="logos" src="LinkedIn.svg" alt="LinkedIn"> </a> 
+                
+                <a href="https://github.com/Benmad551" target="_blank"> 
+                <img class="logos" src="GitHub.svg" alt="GitHub"></a>
             </div>
     </div>
     </footer>
