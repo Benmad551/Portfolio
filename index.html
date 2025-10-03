@@ -10,15 +10,10 @@
 <body>
     <header>
         <h1>Benjamin Madison | Projects & IT Experience</h1>
-        <nav>
-            <ul>
-                <li><a href="#about-me-section" class="button"><span>About Me</span></a></li>
-                <li><a href="#projects-section" class="button"><span>Projects</span></a></li>
-                <li><a href="#IT-support-section" class="button"><span>IT Support Stories</span></a></li>
-            </ul>
-        </nav>
-        <!-- Adding a test button that will have css animation, hopefully to replace the current ones-->
-    </header>
+        <!-- The class button adds the animation to the navigation when hovered and clicked-->
+
+
+    </header> 
 
     <main>
     <section id="about-me-section">   
@@ -33,7 +28,7 @@
         </div>
     </section>
     <section id="projects-section">
-    <h2>Projects</h2>
+    <h2 id="projects-heading">Projects</h2>
         <p>Here are some of my projects:</p>
 
     <div class="rect-container">
@@ -59,7 +54,7 @@
 </section>
 
 <section id="IT-support-section">
-<h2>IT Support Stories</h2>
+<h2 id="IT-support-heading">IT Support Stories</h2>
 <p>Here are some of my personal stories relating to tech and my IT support:</p>
 
 <div class="rect-container">
@@ -81,6 +76,17 @@
     </div>
 </div>
 </section>
+
+<!--Navigation menu-->
+        <input type="checkbox" id="nav-check" hidden>
+        <label for="nav-check" class="nav-toggle">&#9654;</label> <!--Arrow to open and close the nav-->
+        <nav class="sticky-nav">
+            <ul>
+                <li><a href="#about-me-section" class="button"><span>About Me</span></a></li>
+                <li><a href="#projects-section" class="button"><span>Projects</span></a></li>
+                <li><a href="#IT-support-section" class="button"><span>IT Support Stories</span></a></li>
+            </ul>
+        </nav>
     </main>
 
     <footer id="contacts">

@@ -15,6 +15,7 @@ body {
     margin: 0;
     font-family: Geneva, Verdana, sans-serif;
 }
+
  /* ~~~~~~~ Header ~~~~~~~~ */
 header {
     background-color: white; 
@@ -57,6 +58,7 @@ header nav ul {
     font-size: 18px;
 }
 
+/* Animated Button */
 .button {
     cursor: pointer;
     display: inline-flex; /* allow overflow to clip and padding to behave */
@@ -70,6 +72,7 @@ header nav ul {
     font-weight: 900;
     overflow: hidden;
     padding: 4px;
+    height: 60px;
 }
 .button span {
   position: relative;
@@ -126,8 +129,9 @@ main h2 {
     gap: 20px;
 }
 #about-me {
-    max-width: 1000px;;
+    max-width: 1000px;
     padding: 10px;
+
 }
 #EaglePhoto {
     float: right;
@@ -141,6 +145,16 @@ main p {
     color: black;
     margin: 20px;
 }
+
+.rect p > a:hover {
+    color: #0739cf;
+}
+
+/* ~~~~~~~ Sections ~~~~~~ */
+section {
+    scroll-margin-top: 20px;
+} 
+
 
 /* ~~~~~~~ Rectangles Styles ~~~~~~ */
 .rect-container {
@@ -203,13 +217,61 @@ main p {
     color: white;
 }
 
+/* ~~~~~~~ Navigation Menu ~~~~~~ */
+
+.nav-toggle {
+    position: fixed;
+    bottom: calc(3% + 75px);
+    right: 2%;
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 16px;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+.sticky-nav {
+    position: fixed;
+    background: linear-gradient(90deg,
+       rgba(18, 18, 18, 0.33) 0%,
+       rgba(158, 158, 158, 0.35) 35%,
+       rgba(115, 115, 115, 0.32) 100%);
+    border-radius: 10px;
+    border: silver 1px solid;
+    width: 500px;
+    bottom: calc(3% + 35px);
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+    right: -500px;
+    transition: right 0.3s ease;
+    align-items: center;
+}
+
+.sticky-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 0;
+}
+
+
+#nav-check:checked + .nav-toggle + .sticky-nav {
+    right: 100px;
+}
+#nav-check:checked + .nav-toggle {
+    transform: rotate(90deg);
+}
+
+
 /* ~~~~~~~ Footer Styles ~~~~~~ */
 
 footer {
   background-color: white; 
   color: black;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-
+max-height: 100px;
 }
 footer a {
 text-decoration: none;
